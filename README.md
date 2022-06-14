@@ -1,0 +1,2 @@
+# Loanster
+Loan calculator project
