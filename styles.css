@@ -22,7 +22,7 @@ body {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-auto-rows: 15% 15% 30% 20% 20%;
+    grid-auto-rows: 20% 20% 40% 1fr;
 }
 
 header {
@@ -44,7 +44,7 @@ header {
     background-size: cover;
     position: relative;
     /* top: 0; */
-    top: -100%;
+    top: -80%;
     /* left: 0; */
     left: 0;
     height: 100vh;
@@ -54,7 +54,7 @@ header {
 }
 
 .calculation-toggle {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,12 +66,61 @@ header {
     
 }
 
+.calculation-toggle p {
+    /* border: 1px solid orange; */
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0;
+}
+
+
+
 .toggle-buttons {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    height: 72px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0014C2;
+    padding: 8px;
+}
+
+.toggle-buttons h3 {
+    /* border: 1px solid red; */
+    color: #fff;
+    font-weight: 700;
+    height: 56px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.toggle-buttons h3.active {
+    color:hsla(234, 100%, 50%, 1);
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.main {
+    /* border: 1px solid red; */
+    line-height: 76px;
+    align-items: flex-start;
+    margin-top: 4em;
+}
+
+.main h1.active {
+    font-weight: 700;
+    font-size: 64px;
+    color: #fff;
+    padding: 0 12.5%;
+    margin: 0;
 }
 
 /*calculator column*/
