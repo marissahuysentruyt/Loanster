@@ -25,32 +25,39 @@
 
         <section class="calculation-toggle">
             <p>
-                &#128073 Calculate for: 
+                &#128073 &nbsp Calculate for: 
             </p>
             <!-- these will show up plain, then a class of active will get added in the JS, changing the styles & main h1's-->
             <div class="toggle-buttons">
-                <h3 class="active">
+                <h3 class="monthly">
                     Monthly Payment
                 </h3>
-                <h3 class="duration">
+                <h3 class="duration active">
                     Loan Duration
                 </h3>
             </div>
         </section>
 
-        <!-- will be created in JS based on toggle -->
+        <!-- active & inactive classes will be created in JS based on toggle -->
         <section class="main">
-            <h1 class="active">
+            <h1 class="inactive">
                 How much will I have to pay monthly? 
             </h1>
-            <!-- <h1 class="">
+            <h1 class="active">
                 How long will I be paying on my loan? 
-            </h1> -->
+            </h1>
         </section>
 
     </section>
     
     <section class="column-2">
+
+        <!-- inactive & active classes will be added with js -->
+        <section class="clear-calculator inactive">
+            <div class="overlay">
+                <button>Clear Calculation</button>
+            </div>
+        </section>
             
         <section class="inputs">
             <p class="input-principal">Loan Amount
@@ -62,15 +69,18 @@
 
             <p class="input-interest">Interest Rate
                 <label for="interest-rate">
-                    %
                     <input type="range" min="1" max="15" value="6.8" step="any">
                     <!-- <span class="range-slider-background"></span>
-                    <span class="range-slider-handle"></span>
-                    <span class="range-selected-rate"></span> -->
+                    <span class="range-slider-progress"></span>
+                    <span class="range-select-handle"></span> -->
                 </label>
+                <div class="selected-rate active">
+                    6.80%
+                </div>
             </p>
 
-            <p class="input-duration">Loan Duration
+            <!-- inactive & active classes will be created in js -->
+            <p class="input-duration inactive ">Duration
 
                 <label for="dropdown">
                     <select id="dropdown" name="dropdown">
@@ -99,20 +109,45 @@
                 </label>
             </p>
 
+            <p class="input-monthly-payment active">Monthly Payment Amount
+                <label for="monthly-payment" value="$">
+                    $
+                    <input type="text" required="required" placeholder="800">
+                </label>
+            </p>
+
+            <!-- add disabled attribute in js after calculating -->
             <button class="submit">
-                Calculate
+                <div class="overlay">
+                    Calculate
+                </div>
             </button>
 
         </section>
         
         <!-- outputs section will be created with JS  -->
         <section class="outputs">
-            <h1>
-                <sup>$</sup>0.00
-            </h1>
-            <h5>
-                /Month
-            </h5>
+            <section class="monthly-outputs inactive">
+                <span class="currency">$</span>
+                <h1>0.00</h1>
+                <span class="frequency">/Month</span>
+            </section>
+
+            <section class="remaining-months inactive">
+                <h1>0</h1>
+                <span class="months">Months</span>
+            </section>
+
+            <section class="calculated-monthly inactive">
+                <span class="currency">$</span>
+                <h1>0.00</h1>
+                <span class="frequency">/Month</span>
+            </section>
+
+            <section class="calculated-remaining active">
+                <h1>0</h1>
+                <span class="months">Months</span>
+            </section>
         </section>
 
     </section>
