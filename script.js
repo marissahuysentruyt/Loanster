@@ -1,7 +1,10 @@
 //this is for the monthly payment toggle
-let principal; //principal loan amount; input by user
-let rate; //interest rate; selected by user
-let numberOfPayments; //number of payments; selected by user
+//principal loan amount; input by user
+let principal = document.get
+//interest rate; selected by user
+let rate; 
+//number of payments; selected by user
+let numberOfPayments; 
 
 // tests
 // principal = 60000
@@ -12,9 +15,9 @@ let numberOfPayments; //number of payments; selected by user
 // rate = 6.8
 // numberOfPayments = 60
 
-principal = 250000
-rate = 2.84
-numberOfPayments = 360
+// principal = 250000
+// rate = 2.84
+// numberOfPayments = 360
 
 
 //this function changes the rate into a decimal, then divide by 12 to get a monthly interest rate
