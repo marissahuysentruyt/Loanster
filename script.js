@@ -22,6 +22,7 @@ let monthlyRate = () => {
     let monthlyRate = (rate/100) / 12;
     return monthlyRate;
 }
+// test monthlyRate
 // console.log(monthlyRate())
 
 
@@ -29,6 +30,7 @@ let monthlyRate = () => {
 let topFigure = (monthlyRate() * ((1 + monthlyRate()) ** numberOfPayments));
 //the bottom figure in the equation uses the rate (monthly) and numberOfPayments again. Add 1 to the rate, exponentiate that by the numberOfPayments. Subtract one. 
 let bottomFigure = (((1 + monthlyRate()) ** numberOfPayments) - 1);
+// test top/bottom figures
 // console.log(topFigure)
 // console.log(bottomFigure)
 
@@ -39,6 +41,7 @@ const loanCalculation = () => {
     monthlyAmount = monthlyAmount.toFixed(2)
     return monthlyAmount;
 }
+
 console.log(`Monthly Payment is ${loanCalculation()}.`)
 
 

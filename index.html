@@ -28,12 +28,12 @@
             <p>
                 &#128073 &nbsp Calculate for: 
             </p>
-            <!-- these will show up plain, then a class of active will get added in the JS, changing the styles & main h1's-->
+            <!-- class of active or inactive will get added in the JS, changing the styles & main h1's-->
             <div class="toggle-buttons">
-                <h3 class="monthly">
+                <h3 class="monthly active">
                     Monthly Payment
                 </h3>
-                <h3 class="duration active">
+                <h3 class="duration inactive">
                     Loan Duration
                 </h3>
             </div>
@@ -41,10 +41,10 @@
 
         <!-- active & inactive classes will be created in JS based on toggle -->
         <section class="main">
-            <h1 class="inactive">
+            <h1 class="active">
                 How much will I have to pay monthly? 
             </h1>
-            <h1 class="active">
+            <h1 class="inactive">
                 How long will I be paying on my loan? 
             </h1>
         </section>
@@ -70,18 +70,18 @@
 
             <p class="input-interest">Interest Rate
                 <label for="interest-rate">
-                    <input type="range" min="1" max="15" value="6.8" step="any">
+                    <input type="range" min="1" max="15" value="1" step="any">
                     <!-- <span class="range-slider-background"></span>
                     <span class="range-slider-progress"></span>
                     <span class="range-select-handle"></span> -->
                 </label>
                 <div class="selected-rate active">
-                    6.80%
+                    %
                 </div>
             </p>
 
             <!-- inactive & active classes will be created in js -->
-            <p class="input-duration inactive ">Duration
+            <p class="input-duration active ">Duration
 
                 <label for="dropdown">
                     <select id="dropdown" name="dropdown">
@@ -110,7 +110,7 @@
                 </label>
             </p>
 
-            <p class="input-monthly-payment active">Monthly Payment Amount
+            <p class="input-monthly-payment inactive">Monthly Payment Amount
                 <label for="monthly-payment" value="$">
                     $
                     <input type="text" required="required" placeholder="800">
@@ -128,7 +128,7 @@
         
         <!-- outputs section will be created with JS  -->
         <section class="outputs">
-            <section class="monthly-outputs inactive">
+            <section class="monthly-outputs active">
                 <span class="currency">$</span>
                 <h1>0.00</h1>
                 <span class="frequency">/Month</span>
@@ -139,13 +139,14 @@
                 <span class="months">Months</span>
             </section>
 
+            <!-- green calculated numbers -->
             <section class="calculated-monthly inactive">
                 <span class="currency">$</span>
                 <h1>0.00</h1>
                 <span class="frequency">/Month</span>
             </section>
 
-            <section class="calculated-remaining active">
+            <section class="calculated-remaining inactive">
                 <h1>0</h1>
                 <span class="months">Months</span>
             </section>
