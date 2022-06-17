@@ -218,7 +218,7 @@ header {
 
 .inputs .input-principal input,
 .inputs .input-monthly-payment input {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     border: 2px solid transparent;
     line-height: 56px;
     width: 90%;
@@ -326,7 +326,6 @@ header {
 
 .inputs .input-duration.inactive {
     display: none;
-    border: 1px solid red;
 }
 
 .inputs .input-monthly-payment.inactive {
@@ -349,7 +348,7 @@ header {
     /* -webkit-appearance: none;
     -moz-appearance: none; */
     width: 100%;
-    height: 64px;
+    height: 62px;
     padding-left: 5%;
     margin: 0;
     background-color: #f1f1f1;
@@ -357,12 +356,12 @@ header {
     font-size: 20px;
 }
 
-.inputs .input-duration select > button {
+.inputs .input-duration select button {
     color: hsla(234, 100%, 50%, 1);
 }
 
 .inputs .input-duration label select#dropdown button {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color:hsla(234, 100%, 50%, 1);
 }
 

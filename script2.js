@@ -63,7 +63,7 @@ monthlyPaymentButton.addEventListener("click", function() {
     loanDurationButton.removeAttribute("active")
     loanDurationButton.setAttribute("class", "inactive")
 
-    //change input field
+    //change input fields
     //dropdown is on, prefMonth... is off
     dropdown.classList.remove("inactive")
     dropdown.setAttribute("class", "input-duration active")
@@ -92,7 +92,8 @@ loanDurationButton.addEventListener("click", function() {
     // test: durationQuestion.innerText = "changed"
     
 
-    //change input field
+    //change input fields
+    //dropdown is off, prefMonth... is on
     dropdown.classList.remove("active")
     dropdown.setAttribute("class", "input-duration inactive")
     preferredMonthlyPayment.classList.remove("inactive")

@@ -66,13 +66,13 @@
             <p class="input-principal">Loan Amount
                 <label for="principal" value="$">
                     $
-                    <input type="text" required="required" placeholder="10,000">
+                    <input type="text" required="required" placeholder="10,000" name="principal">
                 </label>
             </p>
 
             <p class="input-interest">Interest Rate
                 <label for="interest-rate">
-                    <input type="range" min="1" max="15" value="1" step="any">
+                    <input type="range" min="1" max="15" value="1" step="any" name="interest-rate">
                     <!-- <span class="range-slider-background"></span>
                     <span class="range-slider-progress"></span>
                     <span class="range-select-handle"></span> -->
@@ -83,12 +83,12 @@
                 </span>
             </p>
 
-            <!-- inactive & active classes will be created in js -->
+            <!-- inactive & active classes created in script2 -->
             <p class="input-duration active ">Duration
 
                 <label for="dropdown">
                     <select id="dropdown" name="dropdown" placeholder= "Choose a duration">
-                        <option disabled selected value="choose">
+                        <option disabled selected value="choose" name="dropdown">
                             Choose a duration
                         </option>
                         <option value="24">
@@ -116,7 +116,7 @@
             <p class="input-monthly-payment inactive">Monthly Payment Amount
                 <label for="monthly-payment" value="$">
                     $
-                    <input type="text" required="required" placeholder="800">
+                    <input type="text" required="required" placeholder="800" name="monthly-payment">
                 </label>
             </p>
 
