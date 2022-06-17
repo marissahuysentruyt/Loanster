@@ -29,9 +29,18 @@ let durationQuestion = document.querySelector("h1.inactive");
 // monthlyQuestion.setAttribute("class", "inactive") 
 // monthlyQuestion.removeAttribute("inactive") 
 
+
+//INPUT COLUMN ONLY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 //dropdown menu, monthly payment input, outputs
-let dropdown = document.querySelector(".input-duration");
-let preferredMonthlyPayment = document.querySelector(".input-monthly-payment")
+let dropdown = document.querySelector("p.input-duration.active ");
+// dropdown.style.border = "1px solid orange"
+// dropdown.style.display = "none"
+let preferredMonthlyPayment = document.querySelector("p.input-monthly-payment.inactive")
+
+
+// setting & removing classes so input field changes
+
 
 
 //toggle calculation buttons
@@ -51,8 +60,8 @@ monthlyPaymentButton.addEventListener("click", function() {
     loanDurationButton.setAttribute("class", "inactive")
 
     //change input field
-    dropdown.style.display = "flex"
-    preferredMonthlyPayment.style.display = "none"
+    
+
 
     //change output
     
@@ -74,13 +83,12 @@ loanDurationButton.addEventListener("click", function() {
     monthlyQuestion.setAttribute("class", "inactive")
     
     // test: durationQuestion.innerText = "changed"
+    
 
     //change input field
-    dropdown.style.display = "none"
-    preferredMonthlyPayment.style.display = "flex"
-    preferredMonthlyPayment.style.flexDirection = "column"
-
+    
     //change output
     
 })
+
 
