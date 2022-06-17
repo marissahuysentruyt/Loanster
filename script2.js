@@ -33,6 +33,7 @@ let durationQuestion = document.querySelector("h1.inactive");
 
 
 
+
 //INPUT COLUMN ONLY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //dropdown menu, monthly payment input, outputs
@@ -98,7 +99,6 @@ monthlyPaymentButton.addEventListener("click", function() {
     monthlyPaymentOutput.classList.remove("inactive")
     loanDurationOutput.classList.remove("active")
     loanDurationOutput.setAttribute("class", "remaining-months inactive")
-    
 
 })
 
@@ -118,7 +118,6 @@ loanDurationButton.addEventListener("click", function() {
     
     // test: durationQuestion.innerText = "changed"
     
-
     //change input fields
     //dropdown is off, prefMonth... is on
     dropdown.classList.remove("active")

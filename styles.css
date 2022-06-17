@@ -218,7 +218,7 @@ header {
 
 .inputs .input-principal input,
 .inputs .input-monthly-payment input {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border: 2px solid transparent;
     line-height: 56px;
     width: 90%;
@@ -230,6 +230,15 @@ header {
     padding-right: 0;
     border-left: 2px solid #d2d2d2;
     transition: all 0.15s ease-in-out;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .inputs .input-principal input:hover,
