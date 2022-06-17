@@ -30,11 +30,21 @@ let durationQuestion = document.querySelector("h1.inactive");
 // monthlyQuestion.removeAttribute("inactive") 
 
 
+
+
+
 //INPUT COLUMN ONLY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //dropdown menu, monthly payment input, outputs
+//dropdown defaults to active
 let dropdown = document.querySelector(" p.input-duration.active ");
+//preferredMonthlyPayment defaults to inactive
 let preferredMonthlyPayment = document.querySelector("p.input-monthly-payment.inactive")
+//monthlyPaymentOutput defaults to active
+let monthlyPaymentOutput = document.querySelector(".monthly-outputs.active")
+//loanDurationOutput defaults to inactive
+let loanDurationOutput = document.querySelector(".remaining-months.inactive")
+
 
 // setting & removing classes so input field changes
 // dropdown.setAttribute("class", "input-duration inactive")
@@ -45,6 +55,19 @@ let preferredMonthlyPayment = document.querySelector("p.input-monthly-payment.in
 // preferredMonthlyPayment.classList.remove("inactive")
 // preferredMonthlyPayment.setAttribute("class", "input-monthly-payment active")
 // preferredMonthlyPayment.classList.remove("active")
+// monthlyPaymentOutput.setAttribute("class", "monthly-outputs active")
+// monthlyPaymentOutput.classList.remove("active")
+// monthlyPaymentOutput.setAttribute("class", "monthly-outputs inactive")
+// monthlyPaymentOutput.classList.remove("inactive")
+// loanDurationOutput.setAttribute("class", "remaining-months active")
+// loanDurationOutput.classList.remove("active")
+// loanDurationOutput.setAttribute("class", "remaining-months inactive")
+// loanDurationOutput.classList.remove("inactive")
+
+
+
+
+
 
 
 //toggle calculation buttons
@@ -71,6 +94,10 @@ monthlyPaymentButton.addEventListener("click", function() {
     preferredMonthlyPayment.setAttribute("class", "input-monthly-payment inactive")
 
     //change output
+    monthlyPaymentOutput.setAttribute("class", "monthly-outputs active")
+    monthlyPaymentOutput.classList.remove("inactive")
+    loanDurationOutput.classList.remove("active")
+    loanDurationOutput.setAttribute("class", "remaining-months inactive")
     
 
 })
@@ -101,7 +128,10 @@ loanDurationButton.addEventListener("click", function() {
 
 
     //change output
-    
+    monthlyPaymentOutput.setAttribute("class", "monthly-outputs inactive")
+    monthlyPaymentOutput.classList.remove("active")
+    loanDurationOutput.classList.remove("inactive")
+    loanDurationOutput.setAttribute("class", "remaining-months active")
 })
 
 
