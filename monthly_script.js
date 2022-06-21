@@ -19,6 +19,17 @@ rate =
     console.log(`user selected ${rate}`)
     return rate;
 })
+
+//monthly payment amount; input by user
+let monthlyPayment = document.getElementById("monthly-payment");
+monthlyPayment = 
+    monthlyPayment.addEventListener("keyup", function(e) {
+        monthlyPayment = e.target.value;
+        monthlyPayment = Number(monthlyPayment);
+        console.log(`user entered ${monthlyPayment}`);
+        return monthlyPayment;
+    })
+
 //number of payments; selected by user
 let numberOfPayments; 
 
