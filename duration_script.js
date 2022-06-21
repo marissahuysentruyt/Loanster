@@ -16,26 +16,47 @@ let calculateNewPrincipal = () => {
     let newPrincipal = principal - paidOffAmount;
     principal = newPrincipal
 
-    return `new principal is ${principal}`;
+    return Number(principal.toFixed(2));
 };
 
-// let calculateMonthsLeft = () => {
-//     let monthsLeft = 1;
 
-//     for(let monthsLeft = 1; principal > 0; monthsLeft++) {
-//     // console.log(principal);
-//     if(principal === 0) {
-//         console.log(`user paid off loan in ${monthsLeft} months`)
 
-//     } else {
-//         calculateNewPrincipal();
-//         console.log(principal)
-//     }
-//     monthsLeft = monthsLeft++;
-//     console.log(monthsLeft)
+// this function should run calculateNewPrincipal over and over until the principal === 0, then display the total amount of monthly payments until a user can pay off their loan
+
+let calculateMonthsLeft = () => {
+    //monthsToPay is an empty array
+    let monthsToPay = [];
+
+    //starting with i = 0, as long as the principal is greater than 0, increase i by 1 each time you loop
+    for(let i = 0; principal > 0; i++) {
+        //if the principal is exactly 0
+        if(principal === 0) {
+            //log you paid the loan
+            console.log(`you paid off your loan`)
+
+            //otherwise, if the principal is still greater than 0...
+        } else if (principal > 0) {
+            //test: initial principal with 2 decimal places at the beginning of every loop
+            // console.log(principal.toFixed(2));
     
-// }
-//     return `user paid off loan in ${monthsLeft} months`
+            //starting with i = 1, as long as the principal is greater than 0, increase i by 1 each time you loop
+            for(let i = 1; principal > 0; i++) {
+                //run calculateNewPrincipal over and over
+                calculateNewPrincipal();
+                //tests for outputting the principal, and i
+                // console.log(`principal is ${principal.toFixed(2)}`);
+                // console.log(`item is at ${i}`)
 
-// }
+                //push i into the monthsToPay array
+                monthsToPay.push(i)
+
+            } 
+        }  
+        //return the last item of monthsToPay
+        // console.log(monthsToPay)
+        return monthsToPay.pop()
+    }
+    return monthsToPay.pop()
+}
+
 
