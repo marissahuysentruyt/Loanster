@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet"> 
     <script src="script.js" defer></script>
     <script src="monthly_script.js" defer></script>
-    <script src="duration_script.js"></script>
+    <script src="duration_script.js" defer></script>
+    <script src="display_script.js" defer></script>
 
 </head>
 <body>
@@ -87,8 +88,9 @@
             <p class="input-duration active ">Duration
 
                 <label for="dropdown">
-                    <select id="dropdown" name="dropdown" placeholder= "Choose a duration">
-                        <option disabled selected value="choose" name="dropdown" onchange="selectedOption()">
+                    <select id="dropdown" name="dropdown" placeholder= "Choose a duration" onchange="selectedOption()">
+                        <!-- can I use something like onchange="numberOfPayments()" for the select element? would that fix the refreshing issue?-->
+                        <option disabled selected value="choose" name="dropdown" >
                             Choose a duration
                         </option>
                         <option value="24">

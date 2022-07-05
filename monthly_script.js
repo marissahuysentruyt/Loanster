@@ -32,14 +32,16 @@ monthlyPayment =
 
 //number of payments; selected by user 
 //If they don't refresh the page, this function throws an error. How do I fix that? 
-let numberOfPayments = 
-    function() {
+let numberOfPayments;
+selectedOption = () => {
         let optionsNode = document.getElementById("dropdown");
         let chosenOption = Number(optionsNode.options[optionsNode.selectedIndex].value);
         numberOfPayments = chosenOption;
         console.log(`user selected ${numberOfPayments}`)
         return numberOfPayments;
 };
+
+numberOfPayments = selectedOption();
 
 
 // tests
