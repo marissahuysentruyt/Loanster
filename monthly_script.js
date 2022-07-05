@@ -31,16 +31,20 @@ monthlyPayment =
     })
 
 //number of payments; selected by user 
-//If they don't refresh the page, this function throws an error. How do I fix that? 
 let numberOfPayments;
+//this function is called inline at the select element. onchange="selectedOption()"
 selectedOption = () => {
+        //this gets all the options from the select element, id=dropdown
         let optionsNode = document.getElementById("dropdown");
+        //cast as a Number
+        //looking inside the optionsNode, at options, identify the selected options's index, and assign the value to chosenOption
         let chosenOption = Number(optionsNode.options[optionsNode.selectedIndex].value);
+        //reassign numberOfPayments the same as chosenOption
         numberOfPayments = chosenOption;
         console.log(`user selected ${numberOfPayments}`)
         return numberOfPayments;
 };
-
+//reassign the results of the function to numberOfPayments
 numberOfPayments = selectedOption();
 
 
