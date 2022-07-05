@@ -21,6 +21,7 @@ rate =
 })
 
 //monthly payment amount; input by user
+//USED IN DURATION SCRIPT!
 let monthlyPayment = document.getElementById("monthly-payment");
 monthlyPayment = 
     monthlyPayment.addEventListener("keyup", function(e) {

@@ -24,7 +24,7 @@ let calculateNewPrincipal = () => {
 // this function should run calculateNewPrincipal over and over until the principal === 0, then display the total amount of monthly payments until a user can pay off their loan
 
 let calculateMonthsLeft = () => {
-    //monthsToPay is an empty array
+    //monthsToPay is an empty array. This is where each index (or paying month) will be stored
     let monthsToPay = [];
 
     //starting with i = 0, as long as the principal is greater than 0, increase i by 1 each time you loop
