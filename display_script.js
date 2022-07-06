@@ -1,8 +1,14 @@
 //THIS IS FOR DISPLAYING THE RESULTS FOR THE CALCULATIONS!!!!!!!!!!!!!
 
-//variables for calculate button, and clear button
+//variables for calculate button, clear button, monthly/remaining output cards after calculating, 
 let calculateButton = document.querySelector(".submit");
 let clearButton = document.querySelector("button");
+//DECLARED IN SCRIPT.JS: monthlyPaymentOutput & loanDurationOutput
+
+//do i need these? these are after they're green
+// let calculatedMonthly = document.querySelector(".calculated-monthly");
+// let calculatedRemaining = document.querySelector(".calculated-remaining");
+
 
 //clearForm should replace all the input values to blank strings, leaving their placeholders visible once more
 clearForm = () => {
@@ -10,6 +16,15 @@ clearForm = () => {
     document.querySelector("#interest-rate").value = "";
     document.querySelector("#dropdown").value = "";
     document.querySelector("#monthly-payment").value = "";
+
+    //reverts to uncalculated output cards
+    if(monthlyPaymentOutput.classList.contains("active")) {
+        monthlyPaymentOutput.classList.remove("calculated-monthly")
+    }
+
+    if(loanDurationOutput.classList.contains("active")) {
+        loanDurationOutput.classList.remove("calculated-remaining")
+    }
 
     //quick log just to make sure clearForm works
     console.log("form cleared")
@@ -21,7 +36,8 @@ clearButton.addEventListener("click", function() {
     //clearForm runs
     clearForm();
     //the calculateButton removes class=disabled so the button is active again
-    calculateButton.classList.remove("disabled")
+    calculateButton.classList.remove("disabled");
+
 })
 
 //when calculateButton is clicked...
@@ -31,17 +47,26 @@ calculateButton.addEventListener("click", function() {
     //the calculateButton is disabled visually (I'm not sure it's actually disabled, as in a user couldn't click it?)
     calculateButton.classList.add("disabled")
 
+
+
+
     //if monthlyPaymentButton is selected on the left-hand side
     if(monthlyPaymentButton.classList.contains("active")) {
         //console logs monthly loan payment and the monthlyLoanCalculation runs
-        console.log("monthly loan payment will be calculated")
+        console.log("monthly loan payment will be calculated");
+        monthlyPaymentOutput.setAttribute("class", "monthly-outputs calculated-monthly active")
+
         monthlyLoanCalculation()
     }
 
     //if loanDurationButton is selected on the left-hand side
     if(loanDurationButton.classList.contains("active")) {
         //console logs months left and calculateMonthsLeft runs
-        console.log("months left will be calculated")
+        console.log("months left will be calculated");
+        loanDurationOutput.setAttribute("class", "remaining-months calculated-remaining active");
+
+        
+
         calculateMonthsLeft();
         
     }
