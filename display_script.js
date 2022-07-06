@@ -9,6 +9,9 @@ let clearButton = document.querySelector("button");
 // let calculatedMonthly = document.querySelector(".calculated-monthly");
 // let calculatedRemaining = document.querySelector(".calculated-remaining");
 
+//to store results of calculations
+let results;
+
 
 //clearForm should replace all the input values to blank strings, leaving their placeholders visible once more
 clearForm = () => {
@@ -19,14 +22,16 @@ clearForm = () => {
 
     //reverts to uncalculated output cards
     if(monthlyPaymentOutput.classList.contains("active")) {
+        //remove the calculated-monthly class 
         monthlyPaymentOutput.classList.remove("calculated-monthly")
     }
 
     if(loanDurationOutput.classList.contains("active")) {
+        //remove the calculated-remaining class 
         loanDurationOutput.classList.remove("calculated-remaining")
     }
 
-    //quick log just to make sure clearForm works
+    //quick log to make sure clearForm works
     console.log("form cleared")
    
 }
@@ -46,33 +51,34 @@ calculateButton.addEventListener("click", function() {
     clearButton.style.visibility = "visible";
     //the calculateButton is disabled visually (I'm not sure it's actually disabled, as in a user couldn't click it?)
     calculateButton.classList.add("disabled")
-
-
-
+    
 
     //if monthlyPaymentButton is selected on the left-hand side
     if(monthlyPaymentButton.classList.contains("active")) {
         //console logs monthly loan payment and the monthlyLoanCalculation runs
         console.log("monthly loan payment will be calculated");
+        //add calculated-monthly class so the output card changes to green styles
         monthlyPaymentOutput.setAttribute("class", "monthly-outputs calculated-monthly active")
+        results = Number(monthlyLoanCalculation());
 
-        monthlyLoanCalculation()
+        // return results
     }
 
     //if loanDurationButton is selected on the left-hand side
     if(loanDurationButton.classList.contains("active")) {
         //console logs months left and calculateMonthsLeft runs
         console.log("months left will be calculated");
+        //add calculated-remaining class so the output card changes to green styles
         loanDurationOutput.setAttribute("class", "remaining-months calculated-remaining active");
-
         
+        results = Number(calculateMonthsLeft());
 
-        calculateMonthsLeft();
+        // return results
         
     }
 
     //once either function runs, the console should log that it's done calculating
-    console.log("calculated")
+    console.log(`calculated ${results}`)
 })
 
 
