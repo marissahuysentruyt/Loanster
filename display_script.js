@@ -5,9 +5,13 @@ let calculateButton = document.querySelector(".submit");
 let clearButton = document.querySelector("button");
 //DECLARED IN SCRIPT.JS: monthlyPaymentOutput & loanDurationOutput
 
-//do i need these? these are after they're green
-// let calculatedMonthly = document.querySelector(".calculated-monthly");
-// let calculatedRemaining = document.querySelector(".calculated-remaining");
+//these are after they're green
+let calculatedMonthly = document.querySelector("#calc-monthly-payment");
+let calculatedRemaining = document.querySelector("#months-remaining");
+
+// test
+// calculatedRemaining.style.color = "black"
+// calculatedMonthly.style.color = "orange"
 
 //to store results of calculations
 let results;
@@ -23,12 +27,14 @@ clearForm = () => {
     //reverts to uncalculated output cards
     if(monthlyPaymentOutput.classList.contains("active")) {
         //remove the calculated-monthly class 
-        monthlyPaymentOutput.classList.remove("calculated-monthly")
+        monthlyPaymentOutput.classList.remove("calculated-monthly");
+        calculatedMonthly.innerText = "0.00";
     }
 
     if(loanDurationOutput.classList.contains("active")) {
         //remove the calculated-remaining class 
-        loanDurationOutput.classList.remove("calculated-remaining")
+        loanDurationOutput.classList.remove("calculated-remaining");
+        calculatedRemaining.innerText = 0;
     }
 
     //quick log to make sure clearForm works
@@ -61,6 +67,8 @@ calculateButton.addEventListener("click", function() {
         monthlyPaymentOutput.setAttribute("class", "monthly-outputs calculated-monthly active")
         results = Number(monthlyLoanCalculation());
 
+        calculatedMonthly.innerText = results;
+
         // return results
     }
 
@@ -70,8 +78,9 @@ calculateButton.addEventListener("click", function() {
         console.log("months left will be calculated");
         //add calculated-remaining class so the output card changes to green styles
         loanDurationOutput.setAttribute("class", "remaining-months calculated-remaining active");
-        
         results = Number(calculateMonthsLeft());
+
+        calculatedRemaining.innerText = results
 
         // return results
         
