@@ -17,8 +17,12 @@ rate =
     rate = e.target.value
     rate = Number(rate)
     console.log(`user selected ${rate}`)
-    return rate;
+    let selectedRate = document.querySelector(".selected-rate.active")
+    selectedRate.innerText = `${rate}%`;
+    // return rate;
 })
+
+
 
 //monthly payment amount; input by user
 //USED IN DURATION SCRIPT!
