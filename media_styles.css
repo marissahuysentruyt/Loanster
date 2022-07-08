@@ -1,0 +1,113 @@
+/*loanster responsive styles*/
+@media only screen and (min-width: 325px) {
+    body {
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+
+    /*BLUE SECTION!*/
+    .column-1 {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        max-height: 50vh;
+    }
+
+    .column-1::after {
+        border: 1px solid orange;
+        top: -104.25%;
+        min-height: 50vh;
+    }
+
+    header {
+        /* border: 1px solid white; */
+        padding: 5%;
+        margin: 0; 
+        display: flex;
+    }
+
+    .calculation-toggle {
+        /* border: 1px solid red; */
+        padding: 0;
+        align-items: center;
+    }
+    
+    .calculation-toggle p {
+        /* border: 1px solid orange; */
+        margin-top: 0px;
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .toggle-buttons {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+
+    .toggle-buttons h3 {
+        /* border: 1px solid black; */
+        width: 95%;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .main {
+        /* border: 1px solid orange; */
+        line-height: 50px;
+        margin-top: 1em;
+        margin-bottom: 3em;
+
+    }
+
+    .main h1.active {
+        /* border: 1px solid white; */
+        font-size: 36px;
+    } 
+
+    /*FORM SECTION*/
+    
+
+
+}
+
+
+
+
+@media only screen and (min-width: 400px) {
+    body {
+        border: 2px solid green;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    body {
+        border: 2px solid orange;
+    }
+}
+
+/* desktop-esque */
+@media only screen and (min-width: 768px) {
+    body {
+        border: 2px solid green;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        border: 2px solid orange;
+    }
+}
+
+@media only screen and (min-width: 1136px) {
+    body {
+        border: 2px solid orange;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    body {
+        border: 2px solid green;
+    }
+}

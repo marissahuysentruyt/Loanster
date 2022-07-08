@@ -63,9 +63,11 @@ calculateButton.addEventListener("click", function() {
     if(monthlyPaymentButton.classList.contains("active")) {
         //console logs monthly loan payment and the monthlyLoanCalculation runs
         console.log("monthly loan payment will be calculated");
+
         //add calculated-monthly class so the output card changes to green styles
         monthlyPaymentOutput.setAttribute("class", "monthly-outputs calculated-monthly active")
         results = Number(monthlyLoanCalculation());
+        
 
         calculatedMonthly.innerText = results;
 
