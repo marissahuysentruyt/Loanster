@@ -89,11 +89,6 @@ calculateButton.addEventListener("click", function() {
         
     }
 
-    
-
     //once either function runs, the console should log that it's done calculating
     console.log(`calculated ${results}`)
 })
-
-
-

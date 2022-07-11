@@ -107,7 +107,3 @@ const monthlyLoanCalculation = () => {
 
 
 // console.log(`Monthly Payment is ${monthlyLoanCalculation()}.`)
-
-
-
-
