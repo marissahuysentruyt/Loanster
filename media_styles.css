@@ -1,5 +1,7 @@
 /*loanster responsive styles*/
-@media only screen and (min-width: 325px) {
+
+/* PHONE @325PX*/
+@media only screen and (min-width: 325px), (max-width: 324px) {
     body {
         /* border: 1px solid black; */
         display: flex;
@@ -7,7 +9,7 @@
         flex-basis: 100%;
     }
 
-    /*BLUE SECTION!*/
+    /* BLUE SECTION! */
     .column-1 {
         /* border: 1px solid red; */
         display: flex;
@@ -16,8 +18,8 @@
     }
 
     .column-1::after {
-        border: 1px solid orange;
-        top: -104.25%;
+        /* border: 1px solid orange; */
+        top: -85%;
         min-height: 50vh;
     }
 
@@ -65,49 +67,301 @@
         /* border: 1px solid white; */
         font-size: 36px;
     } 
+   
 
     /*FORM SECTION*/
+    .column-2 {
+        /* border: 1px solid red; */
+        height: auto;
+        padding: 0;
+    }
+
+    .clear-calculator.inactive {
+        padding: 16px;
+    }
     
 
+    .inputs {
+        /* border: 1px solid black; */
+        width: 90%;
+    } 
+
+    .submit {
+        /* border: 1px solid red; */
+        margin-bottom: 2em;
+    }
+
+    .outputs {
+        /* border: 1px solid black; */
+        padding: 0;
+        margin-bottom: 2em;
+    }
+
+    .monthly-outputs.active {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+
+    .monthly-outputs .currency {
+        /* border: 1px solid red; */
+        text-align: left;
+        left: -15px;
+    }
+
 
 }
 
-
-
-
+/* PHONE @400PX*/
 @media only screen and (min-width: 400px) {
     body {
-        border: 2px solid green;
+        /* border: 2px solid green; */
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+
+    /* BLUE SECTION! */
+    .column-1 {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        max-height: 50vh;
+    }
+
+    .column-1::after {
+        /* border: 1px solid orange; */
+        top: -80%;
+        min-height: 50vh;
+    }
+
+    header {
+        /* border: 1px solid white; */
+        padding: 5%;
+        margin: 0; 
+        display: flex;
+    }
+
+    .calculation-toggle {
+        /* border: 1px solid red; */
+        padding: 0;
+        align-items: center;
+    }
+    
+    .calculation-toggle p {
+        /* border: 1px solid orange; */
+        margin-top: 0px;
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .toggle-buttons {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+
+    .toggle-buttons h3 {
+        /* border: 1px solid black; */
+        width: 95%;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .main {
+        /* border: 1px solid orange; */
+        line-height: 50px;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        text-align: left;
+
+
+    }
+
+    .main h1.active {
+        /* border: 1px solid white; */
+        font-size: 36px;
+        padding: 0 5%;
+
+    } 
+
+    /*FORM SECTION*/
+    .column-2 {
+        /* border: 1px solid red; */
+        height: auto;
+        padding: 0;
+    }
+
+    .clear-calculator.inactive {
+        padding: 16px;
+    }
+    
+
+    .inputs {
+        /* border: 1px solid black; */
+        width: 90%;
+    } 
+
+    .submit {
+        /* border: 1px solid red; */
+        margin-bottom: 2em;
+    }
+
+    .outputs {
+        /* border: 1px solid black; */
+        padding: 0;
+        margin-bottom: 2em;
+    }
+
+    .monthly-outputs.active {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+
+    .monthly-outputs .currency {
+        /* border: 1px solid red; */
+        text-align: left;
+        left: -15px;
     }
 }
 
+/* SCREEN @55P0PX */
 @media only screen and (min-width: 550px) {
-    body {
-        border: 2px solid orange;
+
+    .toggle-buttons h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
+
 }
 
-/* desktop-esque */
-@media only screen and (min-width: 768px) {
-    body {
+/* IPAD @719PX */
+@media only screen and (min-width: 719px) {
+    /* body {
         border: 2px solid green;
+    } */
+
+    .column-1::after {
+        top: -72%;
     }
 }
 
+/* IPAD @870PX */
+@media only screen and (min-width: 870px) {
+    /* body {
+        border: 2px solid green;
+    } */
+
+    .column-1::after {
+        top: -75%;
+    }
+}
+
+
+/* DESKTOP-ESQUE @1024PX */
 @media only screen and (min-width: 1024px) {
     body {
-        border: 2px solid orange;
+        /* border: 1px solid black; */
+        display: grid;
+        grid-auto-columns: 20% 20% 20% 20% 20%;
+    }
+
+    /* BLUE SECTION! */
+    .column-1 {
+        /* border: 1px solid red; */
+        grid-column-start: 1;
+        grid-column-end: 3;
+        max-height: 100vh;
+        display: grid;
+        grid-auto-rows: 20% 20% 40% 1fr;
+    }
+
+    .column-1::after {
+        /* border: 1px solid orange; */
+        top: -80%;
+        max-height: 100vh;
+    }
+
+    header {
+        /* border: 1px solid white; */
+        padding-left: 4em;
+        padding-top: 3.5em;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .calculation-toggle {
+        /* border: 1px solid red; */
+        align-items: flex-start;
+        padding: 0 12.5%;
+    }
+    
+    .calculation-toggle p {
+        /* border: 1px solid orange; */
+        font-size: 20px;
+    }
+
+    .toggle-buttons {
+        /* border: 1px solid red; */
+        width: 100%;
+    }
+
+    .toggle-buttons h3 {
+        /* border: 1px solid black; */
+        font-size: 20px;
+        padding: 1em 2em;
+    }
+
+    .main {
+        /* border: 1px solid orange; */
+        line-height: 76px;
+        margin-top: 4em;
+        margin-bottom: 0em;
+        padding: 0 12.5%;
+    }
+
+    .main h1.active {
+        /* border: 1px solid white; */
+        font-size: 64px;
+        padding: 0;
+    } 
+   
+
+    /*FORM SECTION*/
+    .column-2 {
+        /* border: 1px solid red; */
+        height: 100vh;
+    }
+
+    .clear-calculator.inactive {
+        padding: 32px;
+    }
+    
+
+    .inputs {
+        /* border: 1px solid black; */
+        width: 60%;
+    } 
+
+    .submit {
+        /* border: 1px solid red; */
+        margin-bottom: 0em;
+    }
+
+    .outputs {
+        margin-bottom: 0;
+        margin: auto;
+    }
+
+    .monthly-outputs.active {
+        /* border: 1px solid red; */
+        width: 60%;
+    }
+
+    .monthly-outputs .currency {
+        /* border: 1px solid red; */
+        text-align: right;
+        left: -5px;
     }
 }
 
-@media only screen and (min-width: 1136px) {
-    body {
-        border: 2px solid orange;
-    }
-}
-
-@media only screen and (min-width: 1300px) {
-    body {
-        border: 2px solid green;
-    }
-}

@@ -1,3 +1,4 @@
+/* DESKTOP STYLES */
 * {
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -48,7 +49,7 @@ header {
     top: -80%;
     /* left: 0; */
     left: 0;
-    /* height: 100vh; */
+    height: 100vh;
     background-blend-mode: color-dodge; 
     z-index: -1;
     opacity: 0.54;
@@ -76,8 +77,6 @@ header {
     padding: 0;
 }
 
-
-
 .toggle-buttons {
     /* border: 1px solid orange; */
     margin-top: 0;
@@ -101,6 +100,16 @@ header {
     align-items: center;
     padding: 1em 2em;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.toggle-buttons h3:hover, 
+.toggle-buttons h3:focus {
+    background-color:hsla(234, 100%, 50%, 1);
+}
+
+.toggle-buttons h3:active {
+    background-color:hsla(234, 100%, 50%, 0.8);
 }
 
 .toggle-buttons h3.active {
@@ -136,25 +145,22 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: space-evenly; */
     
 }
 
 .clear-calculator.inactive {
     visibility: hidden;
-    display: block;
     text-align: right;
     padding: 32px;
 }
 
-.clear-calculator.active {
-    /* border: 1px solid red; */
+/* .clear-calculator.active {
+    border: 1px solid red;
     visibility: visible;
     display: block;
     text-align: right;
     padding: 32px;
-}
+} */
 
 .clear-calculator button {
     border: none;
@@ -173,7 +179,8 @@ header {
     padding: 14px 0;
 }
 
-.clear-calculator .overlay button:hover {
+.clear-calculator .overlay button:hover,
+.clear-calculator .overlay button:focus {
     background-color: #001aff12;
 }
 
@@ -288,7 +295,8 @@ input[type=number]::-webkit-inner-spin-button {
     transition: all 0.15s ease-in-out;
 }
 
-.inputs p.input-interest label input::-moz-range-thumb:hover {
+.inputs p.input-interest label input::-moz-range-thumb:hover, 
+.inputs p.input-interest label input::-moz-range-thumb:focus {
     background-color: #0014C2;
 }
 

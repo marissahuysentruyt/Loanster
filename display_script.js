@@ -49,6 +49,7 @@ clearButton.addEventListener("click", function() {
     //the calculateButton removes class=disabled so the button is active again
     calculateButton.classList.remove("disabled");
 
+
 })
 
 //when calculateButton is clicked...
@@ -87,6 +88,8 @@ calculateButton.addEventListener("click", function() {
         // return results
         
     }
+
+    
 
     //once either function runs, the console should log that it's done calculating
     console.log(`calculated ${results}`)
